@@ -1,0 +1,125 @@
+:root {
+  --primary-soft-blue: #8bacda;
+  --primary-cyan: #00fff7;
+  --neutral-very-dark-blue: #0d192b;
+  --neutral-very-dark-blue-card: #14253d;
+  --neutral-very-dark-blue-line: #2f415b;
+  --neutral-white: #ffffff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Outfit", sans-serif;
+}
+body {
+  background-color: var(--neutral-very-dark-blue);
+  margin-top: 5rem;
+}
+
+.nft-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 300px;
+  background-color: var(--neutral-very-dark-blue-card);
+  border-radius: 10px;
+  box-shadow: -10px 10px 10px var(--neutral-very-dark-blue);
+  transition: all 200ms ease-in;
+  padding: 20px;
+}
+.nft-card__image {
+  width: 100%;
+  height: 260px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-image: url("./assets/images/image-equilibrium.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.nft-card__image:hover .card-image__container {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+.card-image__container {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 255, 247, 0.3);
+  position: relative;
+  opacity: 0;
+}
+.card-image__container img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+.nft-card__description {
+  border-bottom: 2px solid var(--neutral-very-dark-blue-line);
+  padding-bottom: 1rem;
+}
+.nft-card__description h3 {
+  color: var(--neutral-white);
+  padding: 1rem 0 0;
+  transition: all 200ms ease;
+}
+.nft-card__description h3:hover {
+  color: var(--primary-cyan);
+}
+.nft-card__description p {
+  color: var(--primary-soft-blue);
+  padding: 1rem 0;
+  font-weight: 300;
+}
+.description__data-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.description__eth-price {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: var(--primary-cyan);
+  font-weight: 600;
+  font-size: 0.8rem;
+  gap: 0.5rem;
+}
+.description__date {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: var(--primary-soft-blue);
+  font-size: 0.8rem;
+  gap: 0.5rem;
+}
+.ntf-card__creator {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: var(--primary-soft-blue);
+  font-weight: 300;
+  font-size: 0.8rem;
+  width: 100%;
+}
+.ntf-card__creator img {
+  height: 30px;
+  border: 1px solid var(--neutral-white);
+  border-radius: 100%;
+  margin-right: 0.8rem;
+}
+.ntf-card__creator span {
+  font-weight: 400;
+  color: var(--neutral-white);
+  margin-left: 0.3rem;
+  transition: all 200ms ease;
+}
+.ntf-card__creator span:hover {
+  color: var(--primary-cyan);
+}
